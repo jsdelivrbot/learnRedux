@@ -12,7 +12,7 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {term: 'start'};
+        this.state = {term: ''};
     }
 
     render() {
@@ -20,7 +20,6 @@ class SearchBar extends Component {
             <div className="search-bar">
                 <input
                     onChange={event => {this.onInputChange(event)}}
-                    onKeyPress={event => {this.onKeyPressed(event)}}
                     value = {this.state.term}
                 />
 
@@ -31,13 +30,8 @@ class SearchBar extends Component {
     onInputChange(event) {
         //console.log(event.target.value);
         this.setState({term: event.target.value});
-
+        this.props.onSearchTerm(this.state.term);
     }
 
-    onKeyPressed(event) {
-        if(event.charCode == 13){
-            this.props.onSearchTerm(this.state.term);
-        }
-    }
 }
 export default SearchBar;
