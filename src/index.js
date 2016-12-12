@@ -5,7 +5,7 @@ import _ from 'lodash';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-import Config from 'config';
+import Config from '../config';
 import YTSearch from 'youtube-api-search';
 
 const API_KEY = Config.API_KEY;
