@@ -1,0 +1,1 @@
+export default {API_KEY : 'SAMPLE_API_KEY'};
