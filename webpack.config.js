@@ -1,6 +1,8 @@
 module.exports = {
+
   entry: {
-      yt: './src/youtube/index.js'
+    yt: './src/youtube/index.js',
+    book: './src/book.js'
   },
   output: {
     path: __dirname,
