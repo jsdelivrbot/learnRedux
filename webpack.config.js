@@ -3,7 +3,7 @@ module.exports = {
   entry: {
     yt: './src/youtube/index.js',
     book: './src/book/book.js',
-    forecast: './src/forcaster/index.js'
+    forecast: './src/forecaster/index.js'
   },
   output: {
     path: __dirname,
