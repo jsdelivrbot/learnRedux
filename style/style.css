@@ -31,3 +31,8 @@
     vertical-align: middle !important;
     text-align: center !important;
 }
+
+.city-map {
+    height: 250px;
+    width: 250px;
+}
