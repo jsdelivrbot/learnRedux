@@ -8,7 +8,7 @@ import VideoDetail from './components/video_detail';
 import Config from '../../config';
 import YTSearch from 'youtube-api-search';
 
-const API_KEY = Config.API_KEY;
+const API_KEY = Config.YOUTUBE_API_KEY;
 
 // Function based component.
 // Used when you just take some data and spit some JSX out
