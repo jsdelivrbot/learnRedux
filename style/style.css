@@ -25,3 +25,9 @@
 .list-group-item:hover {
     background-color: #eeeeee;
 }
+
+/* Weather list */
+.city-list td, th{
+    vertical-align: middle !important;
+    text-align: center !important;
+}
