@@ -1,1 +1,4 @@
-export default {API_KEY : 'SAMPLE_API_KEY'};
+export default {
+    YOUTUBE_API_KEY : 'SAMPLE_API_KEY',
+    WEATHER_API_KEY : 'SAMPLE_WEATHER_KEY'
+};
