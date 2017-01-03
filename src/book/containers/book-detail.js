@@ -10,7 +10,7 @@ class BookDetails extends Component {
             return <h5>Select a book to see details</h5>
         }
         return (
-            <div>
+            <div className="col-sm-8">
                 <h3>Details for:</h3>
                 <div>{this.props.book? this.props.book.title: ""}</div>
                 <div>Pages: {this.props.book.pages}</div>
