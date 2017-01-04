@@ -13,7 +13,7 @@ import routes from './routes';
 import { createHistory } from 'history'
 
 const history = useRouterHistory(createHistory)({
-    basename: '/src/blog'
+    basename: '/src/blog/'
 });
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);

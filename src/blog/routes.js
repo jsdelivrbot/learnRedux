@@ -4,6 +4,7 @@
 
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
+import AddPost from './components/post_new';
 
 export default (
     <Route path="/"
@@ -19,6 +20,7 @@ export default (
                     callback(null, require('./components/posts_index').default);
                 });
             }}
-    />
+        />
+        <Route path="add" component={AddPost} />
     </Route>
 );

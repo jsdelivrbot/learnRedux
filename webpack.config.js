@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
       path: __dirname + '/build',
-      publicPath: '/build',
+      publicPath: '/build/',
       filename: '[name].bundle.js',
       chunkFilename: '[id].chunk.js'
   },
@@ -23,6 +23,10 @@ module.exports = {
       }
     }]
   },
+    context: __dirname,
+    node: {
+        __dirname: true
+    },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('common.js')
     ],
