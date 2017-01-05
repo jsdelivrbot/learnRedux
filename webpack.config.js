@@ -1,14 +1,18 @@
+const webpack = require('webpack');
 module.exports = {
+    devtool: 'inline-source-map',
 
   entry: {
-    yt: './src/youtube/index.js',
-    book: './src/book/book.js',
-    forecast: './src/forecaster/index.js'
+      yt: './src/youtube/index.js',
+      book: './src/book/book.js',
+      forecast: './src/forecaster/index.js',
+      blog: './src/blog/index.js'
   },
   output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: '[name].bundle.js'
+      path: __dirname + '/build',
+      publicPath: '/build/',
+      filename: '[name].bundle.js',
+      chunkFilename: '[id].chunk.js'
   },
   module: {
     loaders: [{
@@ -19,11 +23,19 @@ module.exports = {
       }
     }]
   },
+    context: __dirname,
+    node: {
+        __dirname: true
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin('common.js')
+    ],
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-  devServer: {
+  }//,
+  /*devServer: {
     historyApiFallback: true,
-    contentBase: './'
-  }
+    contentBase: './',
+    port: 8081
+  }*/
 };
