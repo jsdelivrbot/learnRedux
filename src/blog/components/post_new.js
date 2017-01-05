@@ -29,24 +29,24 @@ class AddPosts extends Component {
         return (
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <h3>Create a Post</h3>
-                    <div className={`form-group ${title.touched && title.invalid ? 'has-danger': ''}`}>
-                        <label>Title</label>
+                    <div className={`form-group ${title.touched && title.invalid ? 'has-error': ''}`}>
+                        <label className="control-label">Title</label>
                         <input type="text" className="form-control" {...title}/>
-                        <div className="text-help">
+                        <div className="help-block">
                             {title.touched ? title.error : ''}
                         </div>
                     </div>
-                    <div className={`form-group ${categories.touched && categories.invalid ? 'has-danger': ''}`}>
-                        <label>Categories</label>
+                    <div className={`form-group ${categories.touched && categories.invalid ? 'has-error': ''}`}>
+                        <label className="control-label">Categories</label>
                         <input type="text" className="form-control" {...categories}/>
-                        <div className="text-help">
+                        <div className="help-block">
                             {categories.touched? categories.error : ''}
                         </div>
                     </div>
-                    <div className={`form-group ${content.touched && content.invalid ? 'has-danger': ''}`}>
-                        <label>Content</label>
+                    <div className={`form-group ${content.touched && content.invalid ? 'has-error': ''}`}>
+                        <label className="control-label">Content</label>
                         <textarea className="form-control" {...content}/>
-                        <div className="text-help">
+                        <div className="help-block">
                             {content.touched? content.error : ''}
                         </div>
                     </div>
