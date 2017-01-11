@@ -9,7 +9,7 @@ import BookDetail from '../containers/book-detail';
 export default class App extends Component{
     render(){
         return (
-            <div>
+            <div className="row">
                 <BookList/>
                 <BookDetail/>
             </div>

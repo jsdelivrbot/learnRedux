@@ -39,11 +39,13 @@ export default class App extends React.Component {
         return (
             <div>
               <SearchBar onSearchTerm = {term => searchVideo(term)} />
-              <VideoDetail video={this.state.selectedVideo} />
-              <VideoList
-                  onVideoSelect = {selectedVideo => {this.setState({selectedVideo: selectedVideo})}}
-                  videos={this.state.videos}
-              />
+                <div className="row">
+                  <VideoDetail video={this.state.selectedVideo} />
+                  <VideoList
+                      onVideoSelect = {selectedVideo => {this.setState({selectedVideo: selectedVideo})}}
+                      videos={this.state.videos}
+                  />
+                </div>
             </div>
         );
     }
